@@ -61,7 +61,7 @@ const PBPComponent = ({
         required_error: "Profit is required",
         invalid_type_error: "Profit must be a number",
       })
-      .default(10),
+      .default(0),
   });
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -158,13 +158,13 @@ const PBPComponent = ({
                     Profit
                   </FormLabel>
                   <Select
-                    defaultValue="10"
+                    defaultValue="0"
                     onValueChange={(value) => {
                       field.onChange(parseFloat(value));
                     }}
                   >
                     <SelectTrigger>
-                      <SelectValue placeholder="10 %" />
+                      <SelectValue placeholder="0 %" />
                     </SelectTrigger>
 
                     <SelectContent>
