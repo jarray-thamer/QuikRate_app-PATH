@@ -106,6 +106,7 @@ const ProfitCalculationComponent = ({
                     </SelectTrigger>
 
                     <SelectContent>
+                      <SelectItem value={"0"}>0 %</SelectItem>
                       <SelectItem value={"10"}>10 %</SelectItem>
                       <SelectItem value={"15"}>15 %</SelectItem>
                       <SelectItem value={"20"}>25 %</SelectItem>
