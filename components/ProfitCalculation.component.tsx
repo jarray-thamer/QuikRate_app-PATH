@@ -46,7 +46,7 @@ const ProfitCalculationComponent = ({
         required_error: "Profit is required",
         invalid_type_error: "Profit must be a number",
       })
-      .default(0),
+      .default(10),
   });
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -96,17 +96,16 @@ const ProfitCalculationComponent = ({
                     Profit
                   </FormLabel>
                   <Select
-                    defaultValue="0"
+                    defaultValue="10"
                     onValueChange={(value) => {
                       field.onChange(parseFloat(value));
                     }}
                   >
                     <SelectTrigger>
-                      <SelectValue placeholder="0 %" />
+                      <SelectValue placeholder="10 %" />
                     </SelectTrigger>
 
                     <SelectContent>
-                      <SelectItem value={"0"}>0 %</SelectItem>
                       <SelectItem value={"10"}>10 %</SelectItem>
                       <SelectItem value={"15"}>15 %</SelectItem>
                       <SelectItem value={"20"}>25 %</SelectItem>
